@@ -1,19 +1,13 @@
 /* styles.css */
-
-/* General Styles */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #333;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
-/* Header */
 header {
   background-color: #002F6C;
   color: white;
@@ -35,7 +29,6 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Hero Section */
 .hero {
   background: linear-gradient(90deg, #002F6C, #00A9E0);
   animation: gradientShift 6s infinite alternate;
@@ -84,30 +77,9 @@ header nav a:hover {
 }
 
 .cta-buttons button:hover {
-  background-color: #0078A4;
+  background-color: #0078a4;
 }
 
-@keyframes gradientShift {
-  0% {
-    background: linear-gradient(90deg, #002F6C, #00A9E0);
-  }
-  100% {
-    background: linear-gradient(90deg, #001D4A, #0078A4);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Section Styles */
 section {
   padding: 50px 20px;
   text-align: center;
@@ -152,7 +124,6 @@ pre {
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
 footer {
   background-color: #002F6C;
   color: white;
@@ -165,18 +136,6 @@ footer p {
   margin: 5px 0;
 }
 
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Back-to-Top Button */
 #back-to-top {
   position: fixed;
   bottom: 20px;
@@ -206,7 +165,37 @@ footer p {
   }
 }
 
-/* JavaScript for Back-to-Top Button */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(90deg, #002F6C, #00A9E0);
+  }
+  100% {
+    background: linear-gradient(90deg, #001D4A, #0078A4);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 window.addEventListener('scroll', function () {
   const btn = document.getElementById('back-to-top');
   btn.style.display = window.scrollY > 300 ? 'block' : 'none';
