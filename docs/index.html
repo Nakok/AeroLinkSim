@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroLinkSim - Landing Page</title>
+  <link rel="stylesheet" href="style.css">  <!-- Link to the CSS file -->
+</head>
+<body>
+  <header>
+    <h1>AeroLinkSim</h1>
+    <nav>
+      <a href="#features">Features</a> | <a href="#installation">Installation</a> | <a href="#usage">Usage</a> | <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <section class="hero">
+    <h1>Simulating Advanced Drone Networks</h1>
+    <p>A robust platform for modeling drone communication, latency, packet loss, and more.</p>
+    <div class="cta-buttons">
+      <button>Get Started</button>
+      <button>View on GitHub</button>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-item">
+      <h3>Dynamic Network Simulation</h3>
+      <p>Simulate real-time network conditions such as latency, jitter, and packet loss.</p>
+    </div>
+    <div class="feature-item">
+      <h3>ZeroMQ Integration</h3>
+      <p>Efficient communication through ZeroMQ for reliable message exchange.</p>
+    </div>
+    <div class="feature-item">
+      <h3>Customizable Environments</h3>
+      <p>Adjust simulation parameters for different drone scenarios.</p>
+    </div>
+  </section>
+
+  <section id="installation" class="installation">
+    <h2>How to Install AeroLinkSim</h2>
+    <ol>
+      <li>Clone the repository: `git clone https://github.com/Nakok/AeroLinkSim.git`</li>
+      <li>Navigate to the project directory: `cd AeroLinkSim`</li>
+      <li>Install dependencies: `pip install -r requirements.txt`</li>
+      <li>Run the environment: `python run.py`</li>
+    </ol>
+  </section>
+
+  <section id="usage" class="usage">
+    <h2>Usage</h2>
+    <p>Use the following code to start simulating drone networks:</p>
+    <pre>
+      <code>
+        from agent import PPOAgent
+        from env import AeroLinkSimEnv
+
+        env = AeroLinkSimEnv()
+        agent = PPOAgent(env)
+
+        for episode in range(100):
+            agent.train()
+            print(f"Episode {episode + 1} completed.")
+      </code>
+    </pre>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions, suggestions, or want to contribute, feel free to reach out!</p>
+    <p>Email: contact@aerolinksim.com</p>
+    <p>GitHub Issues: <a href="https://github.com/Nakok/AeroLinkSim/issues">Link</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 AeroLinkSim. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
