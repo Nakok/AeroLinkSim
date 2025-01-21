@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f4f7fa;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
@@ -28,26 +28,28 @@ h1, h2, h3 {
 }
 
 header {
-  background: #003366;
+  background: linear-gradient(135deg, #003366, #00598f);
   color: white;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
 header nav {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 header nav a {
-  margin: 0 20px;
+  margin: 0 25px;
   font-size: 1.2rem;
   color: white;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 header nav a:hover {
@@ -58,17 +60,21 @@ header nav a:hover {
   background: linear-gradient(145deg, #00A9E0, #007db8);
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;
+  margin-top: -30px;
+  border-radius: 10px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 30px;
+  line-height: 1.7;
 }
 
 .cta-buttons {
@@ -78,14 +84,15 @@ header nav a:hover {
 }
 
 .cta-buttons button {
-  padding: 15px 30px;
+  padding: 16px 30px;
   font-size: 1.1rem;
   background-color: #007db8;
   color: white;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cta-buttons button:hover {
@@ -93,41 +100,44 @@ header nav a:hover {
 }
 
 section {
-  padding: 40px 20px;
-  max-width: 1100px;
+  padding: 60px 20px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .features, .usage, .installation, .contact {
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 40px;
-  padding: 30px;
+  padding: 40px;
 }
 
 .features h2, .installation h2, .usage h2, .contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 15px;
+  font-size: 2.3rem;
+  margin-bottom: 20px;
   color: #003366;
+  letter-spacing: 1px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .feature-item h3 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-right: 20px;
   color: #00A9E0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .feature-item p {
   font-size: 1.1rem;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 pre {
@@ -138,6 +148,7 @@ pre {
   font-size: 1.1rem;
   overflow-x: auto;
   margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 code {
@@ -145,23 +156,51 @@ code {
 }
 
 footer {
-  background-color: #003366;
+  background: linear-gradient(135deg, #003366, #00598f);
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-footer p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-footer a {
+footer .footer-container p {
+  margin: 10px 0;
+  color: #ddd;
+}
+
+footer .footer-container a {
   color: #00A9E0;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
 }
 
-footer a:hover {
+footer .footer-container a:hover {
+  color: white;
+}
+
+footer .social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .social-links a {
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: color 0.3s ease-in-out;
+}
+
+footer .social-links a:hover {
   color: #fff;
 }
 
@@ -176,11 +215,11 @@ footer a:hover {
 
   .cta-buttons button {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   header nav a {
@@ -195,6 +234,14 @@ footer a:hover {
 
   .feature-item h3 {
     margin-bottom: 10px;
+  }
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  footer .footer-container {
+    padding: 0 15px;
   }
 }
 
