@@ -99,45 +99,96 @@ header nav a:hover {
   background-color: #00A9E0;
 }
 
+/* Redesigned Section Styling */
 section {
-  padding: 60px 20px;
-  max-width: 1200px;
+  padding: 80px 30px;
+  max-width: 1400px;
   margin: 0 auto;
+  background: linear-gradient(to bottom, #f8f9fc, #eef1f7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Containers */
 .features, .usage, .installation, .contact {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  margin-bottom: 40px;
-  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  padding: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e6e9f0;
 }
 
+.features:hover, .usage:hover, .installation:hover, .contact:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Headings */
 .features h2, .installation h2, .usage h2, .contact h2 {
-  font-size: 2.3rem;
-  margin-bottom: 20px;
-  color: #003366;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #002244;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-bottom: 3px solid #00A9E0;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
+/* Features Section */
 .feature-item {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  gap: 20px;
 }
 
 .feature-item h3 {
-  font-size: 1.8rem;
-  margin-right: 20px;
-  color: #00A9E0;
+  font-size: 2rem;
+  color: #0078d7;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .feature-item p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #00A9E0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0078d7;
+}
+
+/* Links */
+section a {
+  color: #00A9E0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+section a:hover {
+  color: #0078d7;
 }
 
 pre {
