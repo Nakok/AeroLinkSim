@@ -1,110 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AeroLinkSim - Drone Simulator and Developer Platform">
-    <meta name="keywords" content="AeroLinkSim, Drone Simulation, Drone API, MAVLink">
-    <title>AeroLinkSim - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AeroLinkSim is a platform for simulating advanced drone networks, modeling communication, latency, packet loss, and more.">
+  <meta property="og:title" content="AeroLinkSim - Landing Page">
+  <meta property="og:description" content="AeroLinkSim is a platform for simulating advanced drone networks, modeling communication, latency, packet loss, and more.">
+  <meta property="og:image" content="link_to_image.jpg">
+  <title>AeroLinkSim - Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="logo.png" alt="AeroLinkSim" class="logo">
-            </a>
-            <ul class="navbar-menu">
-                <li><a href="#platforms">Platforms</a></li>
-                <li><a href="#advantages">Advantages</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<body id="top">
+  <header>
+    <h1>AeroLinkSim</h1>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#installation">Installation</a>
+      <a href="#usage">Usage</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>AeroLinkSim</h1>
-            <p>Revolutionizing drone simulation and development</p>
-            <a href="#platforms" class="cta-button">Get Started</a>
-        </div>
-    </header>
+  <section class="hero">
+    <h1>Simulating Advanced Drone Networks</h1>
+    <p>A robust platform for modeling drone communication, latency, packet loss, and more.</p>
+    <div class="cta-buttons">
+      <button aria-label="Get Started with AeroLinkSim" onclick="window.location.href='#installation'">Get Started</button>
+      <button aria-label="View AeroLinkSim on GitHub" onclick="window.open('https://github.com/Nakok/AeroLinkSim', '_blank')">View on GitHub</button>
+    </div>
+  </section>
 
-    <!-- Platforms Section -->
-    <section id="platforms" class="section platforms">
-        <div class="container">
-            <h2 class="section-title">Your Drone Development Platform</h2>
-            <p class="section-description">Explore tools and APIs for seamless drone integration.</p>
+  <section id="features" class="features">
+    <h2>Key Features</h2>
+    <div class="feature-item">
+      <h3>Dynamic Network Simulation</h3>
+      <p>Simulate real-time network conditions such as latency, jitter, and packet loss.</p>
+    </div>
+    <div class="feature-item">
+      <h3>ZeroMQ Integration</h3>
+      <p>Efficient communication through ZeroMQ for reliable message exchange.</p>
+    </div>
+    <div class="feature-item">
+      <h3>Customizable Environments</h3>
+      <p>Adjust simulation parameters for different drone scenarios.</p>
+    </div>
+  </section>
 
-            <div class="platform-cards">
-                <div class="card">
-                    <img src="path-planning.png" alt="Path Planning">
-                    <h3>Intelligent Path Planning</h3>
-                    <p>Plan and execute optimized flight paths with ease.</p>
-                </div>
-                <div class="card">
-                    <img src="autonomous-flight.png" alt="Autonomous Flight">
-                    <h3>Autonomous Flight</h3>
-                    <p>Enable smart and safe autonomous navigation.</p>
-                </div>
-                <div class="card">
-                    <img src="telemetry.png" alt="Live Telemetry">
-                    <h3>Live Telemetry</h3>
-                    <p>Monitor drone performance in real-time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="installation" class="installation">
+    <h2>How to Install AeroLinkSim</h2>
+    <ol>
+      <li>Clone the repository: <code>git clone https://github.com/Nakok/AeroLinkSim.git</code></li>
+      <li>Navigate to the project directory: <code>cd AeroLinkSim</code></li>
+      <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+      <li>Run the environment: <code>python run.py</code></li>
+    </ol>
+  </section>
 
-    <!-- Advantages Section -->
-    <section id="advantages" class="section advantages">
-        <div class="container">
-            <h2 class="section-title">Why Choose AeroLinkSim?</h2>
-            <div class="advantages-grid">
-                <div class="advantage">
-                    <img src="universal-platform.png" alt="Universal Platform">
-                    <h3>Universal Platform</h3>
-                    <p>Build applications for various platforms with ease.</p>
-                </div>
-                <div class="advantage">
-                    <img src="robust-powerful.png" alt="Robust and Powerful">
-                    <h3>Robust and Powerful</h3>
-                    <p>Leverage the expertise of years of drone R&D.</p>
-                </div>
-                <div class="advantage">
-                    <img src="extensible.png" alt="Extensible">
-                    <h3>Extensible</h3>
-                    <p>Expand capabilities with additional sensors and actuators.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="usage" class="usage">
+    <h2>Usage</h2>
+    <p>Use the following code to start simulating drone networks:</p>
+    <pre>
+      <code>
+from agent import PPOAgent
+from env import AeroLinkSimEnv
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>AeroLinkSim</h2>
-                </div>
-                <div class="footer-links">
-                    <a href="#platforms">Platforms</a>
-                    <a href="#advantages">Advantages</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+env = AeroLinkSimEnv()
+agent = PPOAgent(env)
+
+for episode in range(100):
+    agent.train()
+    print(f"Episode {episode + 1} completed.")
+      </code>
+    </pre>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions, suggestions, or want to contribute, feel free to reach out!</p>
+    <p>Email: <a href="mailto:contact@aerolinksim.com">contact@aerolinksim.com</a></p>
+    <p>GitHub Issues: <a href="https://github.com/Nakok/AeroLinkSim/issues" target="_blank">Link</a></p>
+  </section>
+
+  <footer>
+  <div class="footer-container">
+    <p>&copy; 2025 AeroLinkSim. All rights reserved.</p>
+    <p>Email: <a href="mailto:contact@aerolinksim.com">contact@aerolinksim.com</a></p>
+    <p>GitHub Issues: <a href="https://github.com/Nakok/AeroLinkSim/issues" target="_blank">Link</a></p>
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+
+      <a href="https://github.com" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
+  </div>
+</footer>
 </body>
-
 </html>
 
