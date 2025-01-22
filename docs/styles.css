@@ -207,92 +207,56 @@ code {
 }
 
 footer {
-  background: linear-gradient(135deg, #003366, #00598f);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  font-size: 1.1rem;
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-footer .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-footer .footer-container p {
-  margin: 10px 0;
-  color: #ddd;
-}
-
-footer .footer-container a {
-  color: #00A9E0;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-  transition: color 0.3s ease-in-out;
-}
-
-footer .footer-container a:hover {
-  color: white;
-}
-
-footer .social-links {
-  margin-top: 20px;
+.footer-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo .logo {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-content {
+  flex: 1;
+  margin: 10px 0;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
   gap: 15px;
 }
 
-footer .social-links a {
-  font-size: 1.5rem;
-  color: #ddd;
-  transition: color 0.3s ease-in-out;
+.social-links a img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* Makes logos white */
+  transition: transform 0.3s ease;
 }
 
-footer .social-links a:hover {
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-  }
-
-  .cta-buttons button {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  header nav a {
-    font-size: 1rem;
-    margin: 0 10px;
-  }
-
-  .feature-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .feature-item h3 {
-    margin-bottom: 10px;
-  }
-
-  footer {
-    padding: 40px 20px;
-  }
-
-  footer .footer-container {
-    padding: 0 15px;
-  }
+.social-links a:hover img {
+  transform: scale(1.2);
 }
 
