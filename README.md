@@ -1,5 +1,7 @@
 # AirSim Drone Network Simulation
 
+![Python Version](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Build](https://img.shields.io/badge/build-passing-brightgreen) ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-orange)
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Introduction](#introduction)
@@ -12,6 +14,11 @@
   - [ZeroMQ Setup](#zeromq-setup)
 - [Usage Instructions](#usage-instructions)
   - [Configuration Options](#configuration-options)
+- [Project Demo](#project-demo)
+- [Performance Metrics](#performance-metrics)
+- [Project Goals](#project-goals)
+- [Roadmap](#roadmap)
+- [FAQs](#faqs)
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
@@ -35,10 +42,12 @@ The goal of this project is to provide an end-to-end simulation environment wher
 
 ## Prerequisites
 ### System Requirements
-- Linux-based operating system (Ubuntu preferred)
-- AirSim setup (tested with version 1.8.1)
-- Python 3.10 or later
-- Conda environment management
+| Requirement             | Version          |
+|-------------------------|------------------|
+| Operating System        | Linux (Ubuntu)   |
+| AirSim                  | 1.8.1            |
+| Python                  | 3.10 or later    |
+| Conda                   | Latest           |
 
 ### Conda Setup
 1. Initialize Conda:
@@ -58,8 +67,10 @@ The goal of this project is to provide an end-to-end simulation environment wher
    ```
 
 ### Additional Tools
-- **ZeroMQ**: A messaging library for building scalable, distributed systems.
-- **AirSimNH**: AirSim’s custom version tailored for network simulation.
+| Tool     | Description                                             |
+|----------|---------------------------------------------------------|
+| ZeroMQ   | Messaging library for scalable, distributed systems.    |
+| AirSimNH | AirSim’s custom version tailored for network simulation.|
 
 ## Architecture
 This project has a modular architecture with the following components:
@@ -158,6 +169,39 @@ network_simulation:
 ### Monitor and Analyze
 Utilize the built-in logging and telemetry features to monitor drone performance and analyze the effects of network conditions.
 
+## Project Demo
+![Demo GIF](https://via.placeholder.com/800x400?text=Demo+coming+soon)
+
+## Performance Metrics
+Evaluate drone performance under different conditions:
+- Latency impact on control precision.
+- Jitter effects on stability.
+- Packet loss rates and their correlation with failure scenarios.
+
+Results can be logged using TensorBoard for visualization.
+
+## Project Goals
+- Create a realistic testing environment for drones.
+- Facilitate research in network-aware autonomous systems.
+- Provide a foundation for real-world deployment scenarios.
+
+## Roadmap
+- [x] Integrate AirSim and ZeroMQ.
+- [x] Dynamic network simulation.
+- [ ] Add support for multi-drone simulations.
+- [ ] Implement advanced PPO training workflows.
+- [ ] Enhance visualization of performance metrics.
+
+## FAQs
+**Q: Can this project be run on Windows?**
+A: The current setup is tested on Ubuntu. Windows compatibility may require additional configuration.
+
+**Q: How do I modify the PPO agent's parameters?**
+A: Adjust the parameters in the `ppo_config.yaml` file located in the `configs` directory.
+
+**Q: Where are the logs stored?**
+A: Logs are stored in the `logs/` directory and can be visualized using TensorBoard.
+
 ## Contributing
 We welcome contributions to improve and extend this project. Here are some ways you can contribute:
 
@@ -173,4 +217,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 - **AirSim**: Thanks to Microsoft for providing an excellent open-source drone simulation environment.
 - **ZeroMQ**: A powerful messaging system that helped build the communication backbone for this project.
+- **Contributors**: Thanks to everyone who contributed to making this project a success.
 
