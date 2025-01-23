@@ -31,21 +31,40 @@
     </div>
   </section>
 
-  <section id="features" class="features">
-    <h2>Key Features</h2>
-    <div class="feature-item">
-      <h3>Dynamic Network Simulation</h3>
-      <p>Simulate real-time network conditions such as latency, jitter, and packet loss.</p>
-    </div>
-    <div class="feature-item">
-      <h3>ZeroMQ Integration</h3>
-      <p>Efficient communication through ZeroMQ for reliable message exchange.</p>
-    </div>
-    <div class="feature-item">
-      <h3>Customizable Environments</h3>
-      <p>Adjust simulation parameters for different drone scenarios.</p>
-    </div>
-  </section>
+     <section id="features" class="features">
+      <h2>Key Features</h2>
+      <div class="feature-item">
+        <h3>Dynamic Network Simulation</h3>
+        <p>Simulate real-time network conditions such as latency, jitter, and packet loss to create a realistic communication environment for your drone or robotic agent. These network factors are essential for understanding how communication delays and disruptions can impact performance. </p>
+        <ul>
+          <li><strong>Latency Simulation:</strong> Introduces time delays to replicate network transmission times, which can be adjusted based on real-world network conditions.</li>
+          <li><strong>Jitter Simulation:</strong> Adds random fluctuations to the timing of packet arrivals, mimicking real-world network instability and its effect on control systems.</li>
+          <li><strong>Packet Loss Simulation:</strong> Randomly drops packets to simulate network outages or congestion, testing how the system handles missing or corrupted data.</li>
+          <li><strong>Throughput Metrics:</strong> Monitors data transfer rates and ensures that the system can handle variable bandwidth scenarios effectively.</li>
+        </ul>
+      </div>
+      <div class="feature-item">
+        <h3>ZeroMQ Integration</h3>
+        <p>Leverage ZeroMQ for efficient, low-latency, and fault-tolerant communication between the simulation environment and the drone. ZeroMQ supports multiple messaging patterns (e.g., Publisher-Subscriber, Request-Reply) and handles real-time data transmission in a scalable manner.</p>
+        <ul>
+          <li><strong>Publisher-Subscriber Model:</strong> Send sensor data and control commands from the environment (or ground control station) to the drone, supporting real-time updates.</li>
+          <li><strong>Request-Reply Model:</strong> Allows for two-way communication where the drone sends responses (e.g., state updates or acknowledgment) back to the controller, ensuring synchronization and feedback loops.</li>
+          <li><strong>Message Serialization:</strong> Data (e.g., control actions, observations) is serialized (typically in JSON format) before transmission, ensuring that complex structures are handled correctly over the network.</li>
+          <li><strong>Low Latency and High Throughput:</strong> ZeroMQ optimizes communication to minimize delays and maximize data transfer speeds, crucial for time-sensitive applications like autonomous drones.</li>
+        </ul>
+      </div>
+      <div class="feature-item">
+        <h3>Customizable Environments</h3>
+        <p>Adjust simulation parameters to create a wide range of drone scenarios, testing everything from basic navigation to complex multi-agent interactions under various environmental conditions.</p>
+        <ul>
+          <li><strong>Target Generation:</strong> Dynamically generate targets for the drone to reach, simulating navigation tasks in a variety of terrains and environments.</li>
+          <li><strong>Real-Time Data Feedback:</strong> Monitor and adjust parameters like altitude, position, velocity, and environmental conditions during the simulation, allowing for a more accurate testing environment.</li>
+          <li><strong>Simulated Obstacles and Hazards:</strong> Introduce dynamic obstacles (e.g., other drones, terrain features) to test how the drone reacts to unforeseen challenges.</li>
+          <li><strong>Adjustable Network Conditions:</strong> Fine-tune the network settings (latency, jitter, packet loss) to simulate different levels of network reliability, providing insight into how the drone adapts to varying connectivity conditions.</li>
+        </ul>
+      </div>
+    </section>
+
 
   <section id="installation" class="installation">
     <h2>How to Install AeroLinkSim</h2>
