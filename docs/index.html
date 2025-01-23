@@ -32,31 +32,43 @@
   </section>
 
      <section id="features" class="features">
-      <h2>Key Features</h2>
+      <h2 class="section-title">Key Features</h2>
+
+      <!-- Dynamic Network Simulation -->
       <div class="feature-item">
-        <h3>Dynamic Network Simulation</h3>
-        <p>Simulate real-time network conditions such as latency, jitter, and packet loss to create a realistic communication environment for your drone or robotic agent. These network factors are essential for understanding how communication delays and disruptions can impact performance. </p>
-        <ul>
+        <div class="feature-header">
+          <h3>Dynamic Network Simulation</h3>
+          <p class="feature-description">Simulate real-time network conditions such as latency, jitter, and packet loss to create a realistic communication environment for your drone or robotic agent.</p>
+        </div>
+        <ul class="feature-list">
           <li><strong>Latency Simulation:</strong> Introduces time delays to replicate network transmission times, which can be adjusted based on real-world network conditions.</li>
           <li><strong>Jitter Simulation:</strong> Adds random fluctuations to the timing of packet arrivals, mimicking real-world network instability and its effect on control systems.</li>
           <li><strong>Packet Loss Simulation:</strong> Randomly drops packets to simulate network outages or congestion, testing how the system handles missing or corrupted data.</li>
           <li><strong>Throughput Metrics:</strong> Monitors data transfer rates and ensures that the system can handle variable bandwidth scenarios effectively.</li>
         </ul>
       </div>
+
+      <!-- ZeroMQ Integration -->
       <div class="feature-item">
-        <h3>ZeroMQ Integration</h3>
-        <p>Leverage ZeroMQ for efficient, low-latency, and fault-tolerant communication between the simulation environment and the drone. ZeroMQ supports multiple messaging patterns (e.g., Publisher-Subscriber, Request-Reply) and handles real-time data transmission in a scalable manner.</p>
-        <ul>
+        <div class="feature-header">
+          <h3>ZeroMQ Integration</h3>
+          <p class="feature-description">Leverage ZeroMQ for efficient, low-latency, and fault-tolerant communication between the simulation environment and the drone.</p>
+        </div>
+        <ul class="feature-list">
           <li><strong>Publisher-Subscriber Model:</strong> Send sensor data and control commands from the environment (or ground control station) to the drone, supporting real-time updates.</li>
           <li><strong>Request-Reply Model:</strong> Allows for two-way communication where the drone sends responses (e.g., state updates or acknowledgment) back to the controller, ensuring synchronization and feedback loops.</li>
           <li><strong>Message Serialization:</strong> Data (e.g., control actions, observations) is serialized (typically in JSON format) before transmission, ensuring that complex structures are handled correctly over the network.</li>
           <li><strong>Low Latency and High Throughput:</strong> ZeroMQ optimizes communication to minimize delays and maximize data transfer speeds, crucial for time-sensitive applications like autonomous drones.</li>
         </ul>
       </div>
+
+      <!-- Customizable Environments -->
       <div class="feature-item">
-        <h3>Customizable Environments</h3>
-        <p>Adjust simulation parameters to create a wide range of drone scenarios, testing everything from basic navigation to complex multi-agent interactions under various environmental conditions.</p>
-        <ul>
+        <div class="feature-header">
+          <h3>Customizable Environments</h3>
+          <p class="feature-description">Adjust simulation parameters to create a wide range of drone scenarios, testing everything from basic navigation to complex multi-agent interactions under various environmental conditions.</p>
+        </div>
+        <ul class="feature-list">
           <li><strong>Target Generation:</strong> Dynamically generate targets for the drone to reach, simulating navigation tasks in a variety of terrains and environments.</li>
           <li><strong>Real-Time Data Feedback:</strong> Monitor and adjust parameters like altitude, position, velocity, and environmental conditions during the simulation, allowing for a more accurate testing environment.</li>
           <li><strong>Simulated Obstacles and Hazards:</strong> Introduce dynamic obstacles (e.g., other drones, terrain features) to test how the drone reacts to unforeseen challenges.</li>
