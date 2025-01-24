@@ -2,6 +2,10 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Build](https://img.shields.io/badge/build-passing-brightgreen) ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-orange)
 
+
+![AeroLinkSim Logo](images/logo2.webp)
+
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Introduction](#introduction)
