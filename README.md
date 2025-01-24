@@ -41,7 +41,15 @@ AeroLinkSim is a cutting-edge simulation environment powered by AirSim, designed
 - [Acknowledgments](#acknowledgments)
 
 ## Project Overview
+
+This simulation environment models a drone's behavior while interacting with a control system over a network connection.
+The environment uses **ZeroMQ** for communication, **AirSim** for drone simulation, and applies various network conditions to simulate real-world delays and interruptions.
 This project integrates AirSim with a dynamic network simulation framework designed for drone-based applications. The simulation models real-world network conditions such as latency, jitter, and packet loss, which are essential for testing drone performance in complex environments. In addition, it features ZeroMQ integration to enable efficient message exchange between drones and control systems, ensuring real-time communications.
+
+## Environment Design
+
+The environment is implemented in a Python class that encapsulates the drone's behavior, the interaction with its controller, and the network simulation. The core of the environment is based on the **OpenAI Gym** interface, supporting functions like `reset`, `step`, and reward calculation.
+
 
 ## Introduction
 ### What is AirSim?
@@ -58,7 +66,7 @@ This project combines AirSim with network simulation tools to test the behavior 
 The goal of this project is to provide an end-to-end simulation environment where drone performance can be tested under controlled network conditions before deployment in real-world scenarios.
 
 ## Prerequisites
-### System Requirements
+###   System Requirements
 | Requirement             | Version          |
 |-------------------------|------------------|
 | Operating System        | Linux (Ubuntu)   |
@@ -219,7 +227,7 @@ A: Adjust the parameters in the `ppo_config.yaml` file located in the `configs` 
 **Q: Where are the logs stored?**
 A: Logs are stored in the `logs/` directory and can be visualized using TensorBoard.
 
-## Contributing
+## 🤝 Contributing
 We welcome contributions to improve and extend this project. Here are some ways you can contribute:
 
 - Report bugs or issues.
@@ -228,8 +236,28 @@ We welcome contributions to improve and extend this project. Here are some ways 
 
 Please ensure that all contributions follow the project's coding standards and include adequate tests for new features.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 📄 License
+
+Copyright (c) [2025] [Stephen ODERO]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 
 ## Acknowledgments
 - **AirSim**: Thanks to Microsoft for providing an excellent open-source drone simulation environment.
