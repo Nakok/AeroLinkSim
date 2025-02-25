@@ -46,6 +46,8 @@ This simulation environment models a drone's behavior while interacting with a c
 The environment uses **ZeroMQ** for communication, **AirSim** for drone simulation, and applies various network conditions to simulate real-world delays and interruptions.
 This project integrates AirSim with a dynamic network simulation framework designed for drone-based applications. The simulation models real-world network conditions such as latency, jitter, and packet loss, which are essential for testing drone performance in complex environments. In addition, it features ZeroMQ integration to enable efficient message exchange between drones and control systems, ensuring real-time communications.
 
+![Drone Formation Animation](https://raw.githubusercontent.com/Nakok/AeroLinkSim/main/etc/drone_formation_unique_patterns.gif)
+
 ## Environment Design
 
 The environment is implemented in a Python class that encapsulates the drone's behavior, the interaction with its controller, and the network simulation. The core of the environment is based on the **OpenAI Gym** interface, supporting functions like `reset`, `step`, and reward calculation.
