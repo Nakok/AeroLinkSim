@@ -26,7 +26,9 @@ We create a **virtual Ethernet (veth) pair** to link the namespaces.
 
 ### 🛠 Commands:
 ```bash
-sudo ip link add veth-client type veth peer name veth-server
+sudo ip link add veth-client type veth peer name veth-client
+sudo ip link add veth-server type veth peer name veth-server
+
 ```
 
 Assign each interface to a namespace:
