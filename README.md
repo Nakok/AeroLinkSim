@@ -186,49 +186,6 @@ pip install numpy msgpack-rpc-python airsim torch pillow tensorboard
    ./AirSimNH/LinuxNoEditor/AirSimNH.sh
    ```
 
-### ZeroMQ Setup
-1. Install the ZeroMQ library:
-   ```bash
-   pip install pyzmq
-   ```
-2. Integrate ZeroMQ messaging into your drone and control code. Refer to the `src/zmq_integration.py` file for details.
-
-## Usage Instructions
-### Start the AirSim Simulator
-Follow the steps in the [AirSim Setup](#airsim-setup) section to start the simulator.
-
-### Run the Control Script
-Use the control script to manage drone behavior while simulating real-world network conditions.
-
-Example:
-```bash
-python control_drone.py
-```
-
-### Adjust Network Simulation Parameters
-Modify the network parameters (latency, jitter, packet loss) in the `config.yaml` file or via CLI.
-
-Example (`config.yaml`):
-```yaml
-network_simulation:
-  latency: 50 # ms
-  jitter: 10   # ms
-  packet_loss: 5  # Percentage
-```
-
-### Monitor and Analyze
-Utilize the built-in logging and telemetry features to monitor drone performance and analyze the effects of network conditions.
-
-## Project Demo
-![Demo GIF](https://via.placeholder.com/800x400?text=Demo+coming+soon)
-
-## Performance Metrics
-Evaluate drone performance under different conditions:
-- Latency impact on control precision.
-- Jitter effects on stability.
-- Packet loss rates and their correlation with failure scenarios.
-
-Results can be logged using TensorBoard for visualization.
 
 ## Project Goals
 - Create a realistic testing environment for drones.
@@ -242,15 +199,6 @@ Results can be logged using TensorBoard for visualization.
 - [ ] Implement advanced PPO training workflows.
 - [ ] Enhance visualization of performance metrics.
 
-## FAQs
-**Q: Can this project be run on Windows?**
-A: The current setup is tested on Ubuntu. Windows compatibility may require additional configuration.
-
-**Q: How do I modify the PPO agent's parameters?**
-A: Adjust the parameters in the `ppo_config.yaml` file located in the `configs` directory.
-
-**Q: Where are the logs stored?**
-A: Logs are stored in the `logs/` directory and can be visualized using TensorBoard.
 
 ## 🤝 Contributing
 We welcome contributions to improve and extend this project. Here are some ways you can contribute:
