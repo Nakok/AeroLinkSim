@@ -100,29 +100,15 @@ The goal of this project is to provide an end-to-end simulation environment wher
 | AirSimNH | AirSim’s custom version tailored for network simulation.|
 
 ## Architecture
-This project has a modular architecture with the following components:
+The AirSim-based simulation pipeline, provides a structured framework for training UAVs using RL under dynamically varying network conditions. At the core of this framework is the PPO agent, which serves as the decision-making module, mapping sensory observations to control actions in a continuous action space. The agent interacts with the AirSim environment, a high-fidelity physics-based simulator that models UAV dynamics, aerodynamics, and external disturbances. The simulated drone executes the control commands—\textit{pitch, roll, yaw, and throttle} that directly influence its flight trajectory. The environment, in turn, returns updated state information, including UAV position, velocity, and sensor data, forming the basis for policy learning.
 
-- **AirSim Interface**: Handles drone control and interaction with the simulation environment.
-- **Network Simulation Module**: Introduces network-related disturbances (latency, jitter, packet loss) into the communication channel between the control system and the drone.
-- **ZeroMQ Integration**: A messaging system for sending and receiving commands between the drone and the controller, abstracting network complexities.
-- **Control and Monitoring System**: Monitors the drone’s status and adjusts parameters in real-time based on network performance.
+An extension of this pipeline involves the incorporation of network conditions that mimic real-world network impairments. Using \textit{NetEm} (Network Emulator) \cite{b19}, variations in latency, jitter, packet loss, and bandwidth constraints are introduced, creating a dynamic and challenging communication environment for the UAV. These network-induced variations affect real-time decision making, thereby testing the agent’s ability to operate under degraded connectivity. A reward calculation module quantifies performance based on navigation efficiency, policy robustness, and compliance with safety constraints. This integrated AirSim-PPO pipeline provides insight into RL-based flight control in decentralized and resource-constrained environments.
 
 ### Diagram
 ```
-+-------------------+        +-------------------------+
-|  AirSim Interface |<------>|  Control & Monitoring   |
-|    (Drone)        |        |      System             |
-+-------------------+        +-------------------------+
-               ^                          ^
-               |                          |
-               |                          |
-        +----------------+        +-----------------+
-        | Network        |        | ZeroMQ Messaging |
-        | Simulation     |<------>|  (Send/Receive)  |
-        | (Latency,      |        |                 |
-        | Jitter,        |        +-----------------+
-        | Packet Loss)   |
-        +----------------+
+![Communication Pipeline](./images/airsim_pipeline.png)
+
+**Figure**: Communication pipeline in a remote reinforcement learning setup. Actions are sent from a PPO agent through a network emulation layer to the middleware, which interfaces with the AirSim UAV simulator. Observations and rewards flow back through the system to update the agent.
 ```
 
 ## Installation Guide
