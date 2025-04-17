@@ -99,17 +99,54 @@ The goal of this project is to provide an end-to-end simulation environment wher
 | ZeroMQ   | Messaging library for scalable, distributed systems.    |
 | AirSimNH | AirSim’s custom version tailored for network simulation.|
 
-## Architecture
-The AirSim-based simulation pipeline, provides a structured framework for training UAVs using RL under dynamically varying network conditions. At the core of this framework is the PPO agent, which serves as the decision-making module, mapping sensory observations to control actions in a continuous action space. The agent interacts with the AirSim environment, a high-fidelity physics-based simulator that models UAV dynamics, aerodynamics, and external disturbances. The simulated drone executes the control commands—\textit{pitch, roll, yaw, and throttle} that directly influence its flight trajectory. The environment, in turn, returns updated state information, including UAV position, velocity, and sensor data, forming the basis for policy learning.
 
-An extension of this pipeline involves the incorporation of network conditions that mimic real-world network impairments. Using \textit{NetEm} (Network Emulator) \cite{b19}, variations in latency, jitter, packet loss, and bandwidth constraints are introduced, creating a dynamic and challenging communication environment for the UAV. These network-induced variations affect real-time decision making, thereby testing the agent’s ability to operate under degraded connectivity. A reward calculation module quantifies performance based on navigation efficiency, policy robustness, and compliance with safety constraints. This integrated AirSim-PPO pipeline provides insight into RL-based flight control in decentralized and resource-constrained environments.
 
-### Diagram
-```
-![Communication Pipeline](./images/airsim_pipeline.png)
+## 🧠 Architecture
 
-**Figure**: Communication pipeline in a remote reinforcement learning setup. Actions are sent from a PPO agent through a network emulation layer to the middleware, which interfaces with the AirSim UAV simulator. Observations and rewards flow back through the system to update the agent.
-```
+The **AirSim-based simulation pipeline** provides a structured framework for training UAVs using Reinforcement Learning (RL) under **dynamically varying network conditions**.
+
+At the core of this framework is the **Proximal Policy Optimization (PPO)** agent, which acts as the decision-making module—mapping **sensory observations** to **control actions** in a **continuous action space**.
+
+The agent interacts with the **AirSim environment**, a high-fidelity, physics-based simulator that models UAV dynamics, aerodynamics, and environmental disturbances. The simulated drone executes control commands—**pitch**, **roll**, **yaw**, and **throttle**—which directly influence its flight trajectory.
+
+The environment then returns updated **state information**, including:
+- UAV position  
+- Velocity  
+- Sensor data  
+
+These observations form the basis for continuous policy learning.
+
+---
+
+### 🌐 Network Emulation
+
+An extension of this pipeline introduces **network impairments** that mimic real-world conditions using **NetEm (Network Emulator)**. The following variations are simulated:
+- Latency  
+- Jitter  
+- Packet loss  
+- Bandwidth constraints  
+
+These network-induced disruptions impact **real-time decision-making**, testing the agent's ability to operate under **impaired and fluctuating connectivity**.
+
+A dedicated **reward calculation module** quantifies performance based on:
+- Navigation efficiency  
+- Policy robustness  
+- Compliance with safety constraints  
+
+This integrated **AirSim + PPO + NetEm** pipeline offers valuable insight into **RL-based flight control** within **decentralized**, **resource-constrained** environments.
+
+---
+
+### 🖼️ Diagram
+
+![Communication Pipeline](images/airsim_pipeline.png)
+
+> **Figure**: Communication pipeline in a Remote Reinforcement Learning (RRL) setup.  
+> Actions are sent from a PPO agent through a network emulation layer to the middleware, which interfaces with the AirSim UAV simulator.  
+> Observations and rewards flow back through the system to update the agent.
+
+---
+
 
 ## Installation Guide
 ### Setting Up the Environment
